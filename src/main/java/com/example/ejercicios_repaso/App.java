@@ -68,9 +68,31 @@ public class App {
         }
     }
 
+    public static LinkedList<String> crearLista(){
+        LinkedList<String> list = new LinkedList<>();
+        boolean exit = false;
+        do{
+            System.out.print("Escribe un nombre: ");
+            String nombre = sc.nextLine();
+            if(nombre.isEmpty()){
+                exit = true;
+            }else{
+                list.add(nombre);
+            }
+        }while(!exit);
+        return list;
+    }
+
+    public static void imprimirLista(LinkedList<String> list) {
+        for (int i = list.size() - 1; i >= 0; i--) {
+            System.out.println(list.get(i));
+        }
+    }
+
     public static void main( String[] args ) {
-        //matrizEnteros();
-        //sumarMatriz(crearMatriz());
+        matrizEnteros();
+        sumarMatriz(crearMatriz());
         listaReversa();
+        imprimirLista(crearLista());
     }
 }
