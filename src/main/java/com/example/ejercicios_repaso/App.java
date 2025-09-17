@@ -1,5 +1,6 @@
 package com.example.ejercicios_repaso;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class App {
@@ -47,8 +48,29 @@ public class App {
         System.out.println();
     }
 
+    public static void listaReversa(){
+        LinkedList<String> lista = new LinkedList<>();
+        lista.add("Manuel");
+        lista.add("Manuel");
+        lista.add("Manuel");
+        lista.add("Iván");
+        lista.add("Jorge");
+        lista.add("Mario");
+        lista.add("Pablo");
+        lista.add("Roi");
+        lista.add("Miriam");
+        lista.add("Francisco");
+        lista.add("David");
+        lista.add("Lois");
+        lista.add("José");
+        for (int i = lista.size() - 1; i >= 0; i--) {
+            System.out.println(lista.get(i));
+        }
+    }
+
     public static void main( String[] args ) {
-        matrizEnteros();
-        sumarMatriz(crearMatriz());
+        //matrizEnteros();
+        //sumarMatriz(crearMatriz());
+        listaReversa();
     }
 }
