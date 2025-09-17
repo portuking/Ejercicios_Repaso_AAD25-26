@@ -33,6 +33,7 @@ public class App {
                 matriz[i][j] = num;
             }
         }
+        sc.nextLine();
         return matriz;
     }
 
@@ -94,5 +95,6 @@ public class App {
         sumarMatriz(crearMatriz());
         listaReversa();
         imprimirLista(crearLista());
+        sc.close();
     }
 }
